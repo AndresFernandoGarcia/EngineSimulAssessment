@@ -11,8 +11,6 @@ public class EnemyMovementStationary : MonoBehaviour
     public AudioSource onDeathAudio;
     private Rigidbody2D rb;
     private Vector2 movement;
-    public bool right;
-    float scale = 3f;
     public float stopDistance = 3f;
     public float retreatDistance = 2f;
     public float range = 5f;
@@ -71,15 +69,4 @@ public class EnemyMovementStationary : MonoBehaviour
             this.enabled = false;
         }
     }
-
-    void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.tag == "Boundary")
-                {
-                if (right)
-                        right = false;
-                else
-                        right = true;
-                }
-        }
 }

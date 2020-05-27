@@ -24,5 +24,21 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
             Destroy(effect.gameObject, 0.5f);
         }
+
+        EnemyMovementStationary enemyStationary = collision.GetComponent<EnemyMovementStationary>();
+        if (enemyStationary != null)
+        {
+            enemyStationary.GetHit(damage);
+            var effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+            Destroy(effect.gameObject, 0.5f);
+        }
+
+        if (collision.tag == "foreground")
+            {
+                Destroy(gameObject);
+
+            }
+
     }
 }

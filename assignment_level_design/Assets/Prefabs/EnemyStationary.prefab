@@ -56,12 +56,22 @@ PrefabInstance:
     - target: {fileID: 1499890327744562185, guid: cdc6e762cd91998498f1c3f771c7985f,
         type: 3}
       propertyPath: m_Name
-      value: Enemy (1)
+      value: EnemyStationary
       objectReference: {fileID: 0}
     - target: {fileID: 1499890327744562189, guid: cdc6e762cd91998498f1c3f771c7985f,
         type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499890327744562190, guid: cdc6e762cd91998498f1c3f771c7985f,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -824115577
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499890327744562190, guid: cdc6e762cd91998498f1c3f771c7985f,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1499890327744562191, guid: cdc6e762cd91998498f1c3f771c7985f,
         type: 3}
