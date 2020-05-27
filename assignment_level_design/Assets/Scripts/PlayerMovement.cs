@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletPrefab;
     public AudioSource shootAudio;
     public AudioSource deathSound;
+    public AudioSource ambient;
     public bool ending = false;
     float m_Timer;
     Vector2 movement;
@@ -77,8 +78,12 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("Die", true);
             this.enabled = false;
-            deathSound.Play();
-            Invoke("Restart", 2.1f);
+            
+            if(playerHealth == 0){
+                ambient.Stop();
+                deathSound.Play();
+            }
+            Invoke("Restart", 4.1f);
         }
     }
 
